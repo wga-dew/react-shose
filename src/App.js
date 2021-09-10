@@ -1,18 +1,17 @@
-import React  from "react";
-import {Products} from "./templates";
-import {Header} from "./components";
+import React from "react";
+
+import {Footer, Header, Products} from "./components";
 
 function App() {
-  return (
-    <>
-      <div className="header">
-        <Header />
-      </div>
-      <div className="main">
-        <Products />
-      </div>
-    </>
-  );
+    return (
+        <div className={`container all_content`}>
+            <Header/>
+            <main className={`main`}>
+                <Products/>
+            </main>
+            <Footer/>
+        </div>
+    );
 }
 
 export default App;

@@ -1,5 +1,7 @@
-import Products from "./Products";
+import Card from "./Product/Product";
+import AsideCart from "./Aside/AsideCart";
 
 export {
-    Products,
+    Card,
+    AsideCart,
 }
