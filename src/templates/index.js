@@ -1,4 +1,4 @@
-import Card from "./Product/Product";
+import Card from "./Card/Card";
 import AsideCart from "./Aside/AsideCart";
 
 export {

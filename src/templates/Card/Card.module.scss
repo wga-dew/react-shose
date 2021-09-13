@@ -47,9 +47,21 @@
     top: 0;
     left: 0;
     z-index: 1;
+    transition: background .2s ease-in-out, border .2s ease-in-out;
+
+    &.added {
+      border: 1px solid #FEF0F0;
+      background: #FEF0F0;
+    }
   }
 
-  &__add_to_cart {}
+  &__add_to_cart {
+    transition: background .2s ease-in-out;
+
+    &.added {
+      background: #65dd7a;
+    }
+  }
 
   &__body {
     margin-top: 15px;
@@ -79,6 +91,15 @@
       font-weight: 500;
       font-size: 11px;
       color: #bdbdbd;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product_cart {
+    &:hover {
+      box-shadow: none;
+      transform: none;
     }
   }
 }

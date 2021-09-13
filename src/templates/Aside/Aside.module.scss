@@ -10,16 +10,20 @@
   pointer-events: none;
   width: 0px;
   height: 100vh;
-  transition: width .2s ease-in-out, padding .2s ease-in-out, opacity .3s ease-in-out;
+  transform: translateX(110%);
+  transition: width .5s ease-in-out, padding .2s ease-in-out, opacity .3s ease-in-out, transform .15s ease-in-out;
   background: #FFFFFF;
   z-index: 10;
 
   &.active {
+    transition: width .2s ease-in-out, padding .2s ease-in-out, opacity .5s ease-in-out, transform .15s ease-in-out;
+    transform: translateX(0);
     pointer-events: auto;
     width: 400px;
     opacity: 1;
     padding: 30px;
   }
+
 
   .aside_cart {
     display: flex;
@@ -27,6 +31,12 @@
     justify-content: space-between;
     height: 100%;
     width: 100%;
+  }
+
+  &_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   &_title {

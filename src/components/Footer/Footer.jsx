@@ -3,12 +3,12 @@ import s from './Footer.module.scss';
 import {AsideCart} from "../../templates";
 
 
-const Footer = () => {
+const Footer = ({cartItems, isOpenAside, onOpenAside, onDelInCart}) => {
 
     return (
         <footer>
-            <AsideCart />
-            <div className={`${s.overflow}`}></div>
+            <AsideCart cartItems={cartItems} isOpenAside={isOpenAside} onOpenAside={onOpenAside} onDelInCart={onDelInCart} />
+            <div className={`${s.overflow}${isOpenAside ? ` ${s.active}` : ''}`} onClick={() => onOpenAside(false)}></div>
         </footer>
     )
 };
